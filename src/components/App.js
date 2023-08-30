@@ -20,29 +20,28 @@ const App = () => {
       return;
     }
     if (!/^[a-z0-9 ]+$/i.test(user.name)) {
-      setError("Name is not alphanumeric.");
+      setError("Name is not alphanumeric");
       setSucces("")
       return;
     }
     if (!user.email.includes("@")) {
-      setError("Email must contain @.");
+      setError("Email must contain @");
       setSucces("")
       return;
     }
-    console.log(selectedOption !== "Male");
-    console.log(selectedOption != "female");
+     
     if (
       ["Male", "female", "other"].indexOf(selectedOption) < 0
       // selectedOption != "Male" ||
       // selectedOption !== "female" ||
       // selectedOption !== "other"
     ) {
-      setError("Please identify as male, female or others.");
+      setError("Please identify as male, female or others");
       setSucces("")
       return;
     }
     if (!/^[0-9]+$/.test(user.phoneNumber)) {
-      setError("Phone Number must contain only numbers.");
+      setError("Phone Number must contain only numbers");
       setSucces("")
       return;
     }
@@ -119,8 +118,8 @@ const App = () => {
       <button data-testid="submit" onClick={handleSubmitBtn}>
         Submit button{" "}
       </button>
-      {error && <span>Error Message: {error}</span>}
-      {succes && <span>{succes}</span>}
+      {error && <span> {error}</span>}
+      {succes && <h2>{succes}</h2>}
     </div>
   );
 };
