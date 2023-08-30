@@ -51,7 +51,7 @@ const App = () => {
       return;
     }
     let name = user.email.split("@")
-    setSucces("Hello " + name[0])
+    setSucces(name[0].toUpperCase())
     setError("")
     
   }
@@ -119,7 +119,7 @@ const App = () => {
         Submit button{" "}
       </button>
       {error && <span>{error}</span>}
-      {succes && <h2>{succes}</h2>}
+      {succes && <h2>Hello<span>{succes}</span></h2>}
     </div>
   );
 };
