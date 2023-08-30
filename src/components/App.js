@@ -25,7 +25,7 @@ const App = () => {
       return;
     }
     if (!user.email.includes("@")) {
-      setError("Email must contain @");
+      setError("email must contain @");
       setSucces("")
       return;
     }
@@ -51,7 +51,7 @@ const App = () => {
       return;
     }
     let name = user.email.split("@")
-    setSucces("Hello " + name)
+    setSucces("Hello " + name[0])
     setError("")
     
   }
@@ -118,7 +118,7 @@ const App = () => {
       <button data-testid="submit" onClick={handleSubmitBtn}>
         Submit button{" "}
       </button>
-      {error && <span> {error}</span>}
+      {error && <span>{error}</span>}
       {succes && <h2>{succes}</h2>}
     </div>
   );
